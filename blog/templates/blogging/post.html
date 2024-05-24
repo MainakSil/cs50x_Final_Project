@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block main %}
+    <h1>{{ post.title }}</h1>
+
+    <p class="lead">Posted on {{ post.timestamp }} by {{ user.username }}</p>
+
+    {{ post.content | safe }}
+
+    <a href="{{ url_for('blogging.edit_post', post_id=post.id) }}"
+    class="btn btn-primary mx-auto mt-3">Edit This Post</a>
+{% endblock %}

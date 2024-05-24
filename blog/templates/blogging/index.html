@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Home Page
+{% endblock %}
+
+{% block main %}
+    <h1>Your Home Page</h1>
+    <p class="lead">Hello, {{ user.username }}!</p>
+    <h2 class="text-center">Your Latest Blog Posts:</h2>
+    {%- include "blogging/_postlist.html" -%}
+    <p class="text-center">To view all your posts, visit your <a href="{{ url_for("blogging.posts") }}">post archive page</a>.</p>
+{% endblock %}

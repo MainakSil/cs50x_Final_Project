@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Post Archive
+{% endblock %}
+
+{% block main %}
+    <h1>Post Archive</h1>
+    <p class="lead">Hello, {{ user.username }}! This is an archive of all your blog posts.</p>
+    {%- include "blogging/_postlist.html" -%}
+{% endblock %}

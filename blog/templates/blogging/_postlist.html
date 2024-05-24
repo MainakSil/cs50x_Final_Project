@@ -1,0 +1,18 @@
+{% if not posts %}
+<p class="text-center">Looks like you have not made any posts yet. You may start <a href="{{ url_for('blogging.create_post') }}">creating one</a> now.</p>
+{% else %}
+<section>
+    {% for post in posts %}
+        <div class="card m-4">
+            <div class="card-body">
+                <a href="{{ url_for('blogging.post', post_id=post.id) }}">
+                    <h3 class="card-title">{{ post.title }}</h3>
+                </a>
+                <time class="card-text d-block">{{ post.timestamp }}</time>
+                <a href="{{ url_for('blogging.edit_post', post_id=post.id) }}"
+                    class="btn btn-primary mt-3">Edit</a>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+{% endif %}
