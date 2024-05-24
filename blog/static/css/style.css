@@ -1,0 +1,34 @@
+/* Size for brand */
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue {
+    color: #537fbe;
+}
+nav .navbar-brand .red {
+    color: #ea433b;
+}
+nav .navbar-brand .green {
+    color: #2e944b;
+}
+
+/* My styles */
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.7em;
+}
+
+h1, .lead {
+    text-align: center;
+}
+
+.card, .form-control, .form-select {
+    border: 0.1em solid gray;
+}
+
+.sticky--top {
+    position: sticky;
+    top: 0;
+}
