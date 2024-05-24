@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account Settings
+{% endblock %}
+
+{% block main %}
+    <h1>Account Settings</h1>
+
+    <section class="text-center m-5">
+        <h2>Change Your Username</h2>
+        <p >Your current username: {{ username }}</p>
+        <form action="{{ url_for("account.change_username") }}" method="post">
+            <div class="mb-3">
+                <label for="new-username-input" class="form-label">Enter your new username:</label>
+                <input autofocus class="form-control mx-auto w-auto" name="new-username" id="new-username-input" placeholder="Enter new username" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Change Username</button>
+        </form>
+    </section>
+
+    <section class="text-center m-5">
+        <h2>Change Your Password</h2>
+        <form action="{{ url_for("account.change_password") }}" method="post">
+            <div class="mb-3">
+                <label for="current-password-input" class="form-label">Enter your current password:</label>
+                <input autofocus class="form-control mx-auto w-auto" name="current-password" id="current-password-input" placeholder="Enter current password" type="password">
+            </div>
+            <div class="mb-3">
+                <label for="new-password-input" class="form-label">Enter your new password:</label>
+                <input class="form-control mx-auto w-auto" name="new-password" id="new-password-input" placeholder="Enter new password" type="password">
+            </div>
+            <div class="mb-3">
+                <label for="new-confirmation-input" class="form-label">Confirm your new password:</label>
+                <input class="form-control mx-auto w-auto" name="new-confirmation" id="new-confirmation-input" placeholder="Confirm new password" type="password">
+            </div>
+            <button class="btn btn-primary" type="submit">Change Password</button>
+        </form>
+    </section>
+{% endblock %}
