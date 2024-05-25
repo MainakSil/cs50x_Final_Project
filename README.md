@@ -32,6 +32,7 @@ Requires Python to be installed first.
 
 1. Clone this repository locally
     ```
+    git clone https://github.com/MainakSil/cs50x_Final_Project.git
     cd cs50x_Final_Project
     ```
 
