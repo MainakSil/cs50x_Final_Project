@@ -32,7 +32,7 @@ Requires Python to be installed first.
 
 1. Clone this repository locally
     ```
-    cd cs50-flask-blog
+    cd cs50x_Final_Project
     ```
 
 1. Create Python virtual environment
